@@ -1,155 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Weekly Training & Flexibility Schedule</title>
-      <style>
-          body {
-              font-family: Arial, sans-serif;
-              line-height: 1.6;
-              margin: 20px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Training & Flexibility Schedule</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+
+      h3 {
+        color: #16a085;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0 20px;
+      }
+
+      .day {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #f9f9f9;
+      }
+      img {
+        max-height: 20vh;
+      }
+      #content {
+        display: none;
+      }
+    </style>
+      <script>
+        function checkPassword() {
+          var password = document.getElementById("password").value;
+          var correctPassword = "secretPasswordShhhh";
+
+          if (password === correctPassword) {
+            document.getElementById("content").style.display = "block";
+            document.getElementById("loginForm").style.display = "none";
+          } else {
+            alert("Incorrect password.");
           }
-          h1, h2 {
-              color: #2c3e50;
+        }
+        function handleKeyPress(event) {
+          if (event.key === "Enter") {
+            checkPassword();
           }
-          h3 {
-              color: #16a085;
-          }
-          ul {
-              margin: 0;
-              padding: 0 20px;
-          }
-          .day {
-              margin-bottom: 20px;
-              padding: 15px;
-              border: 1px solid #ddd;
-              border-radius: 8px;
-              background: #f9f9f9;
-          }
-      </style>
+        }
+      </script>
   </head>
+
   <body>
+    <section id="loginForm">
+      <h2>Enter Password</h2>
+      <input type="password" id="password" onkeydown="handleKeyPress(event)" autofocus>
+      <button onclick="checkPassword()">Submit</button>
+    </section>
+    <main id="content">
       <h1>Weekly Training & Flexibility Schedule</h1>
-  
+
       <div class="day">
-          <h2>Day 1: Upper Body Strength & Hypertrophy + Flexibility</h2>
-          <h3>Strength Training</h3>
-          <ul>
-              <li>Dumbbell Bench Press (SmartBells): 4 sets of 6-8 reps</li>
-              <li>One-Arm Dumbbell Rows (SmartBells): 4 sets of 8-10 reps per arm</li>
-              <li>Push-Ups on Dip Bars: 3 sets of 10-15 reps</li>
-              <li>Overhead Shoulder Press (SmartBells): 3 sets of 8-10 reps</li>
-              <li>Resistance Band Face Pulls: 3 sets of 12-15 reps</li>
-              <li>Core: Plank with Shoulder Taps (3 sets of 20 taps)</li>
-          </ul>
-          <h3>Flexibility (Post-Workout)</h3>
-          <ul>
-              <li>Forward Fold: 2 sets of 30 seconds</li>
-              <li>Shoulder Stretch (Puppy Pose): 2 sets of 30 seconds</li>
-              <li>Bridge Pose: 2 sets of 10-15 seconds</li>
-          </ul>
+        <h2>Day 1: Upper Body Strength & Hypertrophy + Flexibility</h2>
+        <h3>Strength Training</h3>
+        <ul>
+          <li>
+            <figure>
+              <img
+                src="https://hips.hearstapps.com/hmg-prod/images/workouts/2017/04/inclinedumbbellbenchpress-1492108229.gif?resize=640:*"
+                alt="">
+              <figcaption>Dumbbell Bench Press (SmartBells): 4 sets of 6-8 reps</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="https://hips.hearstapps.com/menshealth-uk/main/assets/dumbbell-single-arm-row.gif?resize=980:*" alt="">
+              <figcaption>Dumbbell Rows (SmartBells): 4 sets of 8-10 reps per arm</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="https://hips.hearstapps.com/hmg-prod/images/dips-1651142644.jpg?resize=980:*" alt="">
+              <figcaption>Push-Ups on Dip Bars: 3 sets of 10-15 reps</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="https://hips.hearstapps.com/hmg-prod/images/workouts/2016/03/dumbbellshoulderpress-1457041578.gif?resize=640:*" alt="">
+              <figcaption>Overhead Shoulder Press (SmartBells): 3 sets of 8-10 reps</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="https://hips.hearstapps.com/hmg-prod/images/workouts/2016/12/bandfacepull-1480628546.gif" alt="">
+              <figcaption>Resistance Band Face Pulls: 3 sets of 12-15 reps</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="https://images.squarespace-cdn.com/content/v1/5d24e9a767b6020001f9fb3a/1565722681788-XE7VEJMVWCX9JEVSHFVH/Plank+with+Shoulder+Taps" alt="">
+              <figcaption>Core: Plank with Shoulder Taps (3 sets of 20 taps)</figcaption>
+            </figure>
+          </li>
+        </ul>
+        <h3>Flexibility (Post-Workout)</h3>
+        <ul>
+          <li>
+            <img src="https://media0.giphy.com/media/YQ4EE1iBXyLacDRm8A/giphy.gif?cid=6c09b95275ht4396w05ncilsxdgut50b5adz4p53fb4fue39&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="">
+            <figcaption>Forward Fold: 2 sets of 30 seconds</figcaption>
+          </li>
+          <li>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRegHNnjxISF1k8yNdLAHa4U3knEzXNqhmwFfbfzdH7C7eQ2zZEadpQJFBVQfvSi6Kppk&usqp=CAU" alt="">
+            <figcaption>Shoulder Stretch (Puppy Pose): 2 sets of 30 seconds</figcaption>
+          </li>
+          <li>
+            <img src="https://i.pinimg.com/originals/bf/a1/7f/bfa17f34576939d0b10c3a8caab547b1.gif" alt="">
+            <figcaption>Bridge Pose: 2 sets of 10-15 seconds</figcaption>
+          </li>
+        </ul>
       </div>
-  
+
       <div class="day">
-          <h2>Day 2: Lower Body Strength & Power + Mobility</h2>
-          <h3>Strength Training</h3>
-          <ul>
-              <li>Goblet Squats (Kettlebell): 4 sets of 6-8 reps</li>
-              <li>Romanian Deadlifts (SmartBells): 4 sets of 8-10 reps</li>
-              <li>Bulgarian Split Squats (SmartBells): 3 sets of 10-12 reps per leg</li>
-              <li>Kettlebell Swings: 3 sets of 12-15 reps</li>
-              <li>Resistance Band Glute Bridges: 3 sets of 15-20 reps</li>
-          </ul>
-          <h3>Flexibility (Post-Workout)</h3>
-          <ul>
-              <li>Hamstring Stretch: 2 sets of 30 seconds per leg</li>
-              <li>Pigeon Pose: 2 sets of 30 seconds per side</li>
-              <li>Deep Squat Hold: 2 sets of 30 seconds</li>
-          </ul>
+        <h2>Day 2: Lower Body Strength & Power + Mobility</h2>
+        <h3>Strength Training</h3>
+        <ul>
+          <li>Goblet Squats (Kettlebell): 4 sets of 6-8 reps</li>
+          <li>Romanian Deadlifts (SmartBells): 4 sets of 8-10 reps</li>
+          <li>Bulgarian Split Squats (SmartBells): 3 sets of 10-12 reps per leg</li>
+          <li>Kettlebell Swings: 3 sets of 12-15 reps</li>
+          <li>Resistance Band Glute Bridges: 3 sets of 15-20 reps</li>
+        </ul>
+        <h3>Flexibility (Post-Workout)</h3>
+        <ul>
+          <li>Hamstring Stretch: 2 sets of 30 seconds per leg</li>
+          <li>Pigeon Pose: 2 sets of 30 seconds per side</li>
+          <li>Deep Squat Hold: 2 sets of 30 seconds</li>
+        </ul>
       </div>
-  
+
       <div class="day">
-          <h2>Day 3: Conditioning & Agility + Flexibility</h2>
-          <h3>Conditioning</h3>
-          <ul>
-              <li>High Knees with Resistance Band: 3 sets of 20-30 seconds</li>
-              <li>Step-Ups (use a sturdy surface with Kettlebell): 3 sets of 10-12 reps per leg</li>
-              <li>Sprint Intervals: 6-8 x 40 meters (rest 90 seconds between sprints)</li>
-              <li>Kettlebell Deadlift to Press: 3 sets of 8-10 reps</li>
-          </ul>
-          <h3>Flexibility (Post-Workout)</h3>
-          <ul>
-              <li>Spiderman Stretch with Rotation: 2 sets of 5 rotations per side</li>
-              <li>Straddle Stretch: 2 sets of 30 seconds per side</li>
-              <li>Wrist Mobility Drills: 5 minutes</li>
-          </ul>
+        <h2>Day 3: Conditioning & Agility + Flexibility</h2>
+        <h3>Conditioning</h3>
+        <ul>
+          <li>High Knees with Resistance Band: 3 sets of 20-30 seconds</li>
+          <li>Step-Ups (use a sturdy surface with Kettlebell): 3 sets of 10-12 reps per leg</li>
+          <li>Sprint Intervals: 6-8 x 40 meters (rest 90 seconds between sprints)</li>
+          <li>Kettlebell Deadlift to Press: 3 sets of 8-10 reps</li>
+        </ul>
+        <h3>Flexibility (Post-Workout)</h3>
+        <ul>
+          <li>Spiderman Stretch with Rotation: 2 sets of 5 rotations per side</li>
+          <li>Straddle Stretch: 2 sets of 30 seconds per side</li>
+          <li>Wrist Mobility Drills: 5 minutes</li>
+        </ul>
       </div>
-  
+
       <div class="day">
-          <h2>Day 4: Active Recovery + Flexibility Session</h2>
-          <h3>Active Recovery</h3>
-          <ul>
-              <li>Light yoga or walking (20-30 minutes)</li>
-          </ul>
-          <h3>Flexibility Session</h3>
-          <ul>
-              <li>Pike Stretch: 2 sets of 30 seconds</li>
-              <li>Shoulder Dislocates with Resistance Band: 2 sets of 10-15 reps</li>
-              <li>Cat-Cow Stretch: 1-2 minutes</li>
-              <li>Wall Splits: 2 sets of 20 seconds per side</li>
-          </ul>
+        <h2>Day 4: Active Recovery + Flexibility Session</h2>
+        <h3>Active Recovery</h3>
+        <ul>
+          <li>Light yoga or walking (20-30 minutes)</li>
+        </ul>
+        <h3>Flexibility Session</h3>
+        <ul>
+          <li>Pike Stretch: 2 sets of 30 seconds</li>
+          <li>Shoulder Dislocates with Resistance Band: 2 sets of 10-15 reps</li>
+          <li>Cat-Cow Stretch: 1-2 minutes</li>
+          <li>Wall Splits: 2 sets of 20 seconds per side</li>
+        </ul>
       </div>
-  
+
       <div class="day">
-          <h2>Day 5: Upper Body Hypertrophy + Flexibility</h2>
-          <h3>Strength Training</h3>
-          <ul>
-              <li>Incline Dumbbell Press (SmartBells, elevated surface): 4 sets of 8-10 reps</li>
-              <li>Weighted Dips (using SmartBells or resistance bands): 4 sets of 10-12 reps</li>
-              <li>Dumbbell Lateral Raises (SmartBells): 3 sets of 12-15 reps</li>
-              <li>Resistance Band Rows: 3 sets of 10-12 reps</li>
-              <li>Core: Ab Wheel Rollouts (or substitute plank variations)</li>
-          </ul>
-          <h3>Flexibility (Post-Workout)</h3>
-          <ul>
-              <li>Shoulder Stretch (Eagle Arms or Puppy Pose): 2 sets of 30 seconds</li>
-              <li>Bridge Pose Progressions: 2 sets of 10-15 seconds</li>
-              <li>Forward Fold: 2 sets of 30 seconds</li>
-          </ul>
+        <h2>Day 5: Upper Body Hypertrophy + Flexibility</h2>
+        <h3>Strength Training</h3>
+        <ul>
+          <li>Incline Dumbbell Press (SmartBells, elevated surface): 4 sets of 8-10 reps</li>
+          <li>Weighted Dips (using SmartBells or resistance bands): 4 sets of 10-12 reps</li>
+          <li>Dumbbell Lateral Raises (SmartBells): 3 sets of 12-15 reps</li>
+          <li>Resistance Band Rows: 3 sets of 10-12 reps</li>
+          <li>Core: Ab Wheel Rollouts (or substitute plank variations)</li>
+        </ul>
+        <h3>Flexibility (Post-Workout)</h3>
+        <ul>
+          <li>Shoulder Stretch (Eagle Arms or Puppy Pose): 2 sets of 30 seconds</li>
+          <li>Bridge Pose Progressions: 2 sets of 10-15 seconds</li>
+          <li>Forward Fold: 2 sets of 30 seconds</li>
+        </ul>
       </div>
-  
+
       <div class="day">
-          <h2>Day 6: Lower Body Power & Hypertrophy + Mobility</h2>
-          <h3>Strength Training</h3>
-          <ul>
-              <li>Kettlebell Goblet Squats: 4 sets of 8-10 reps</li>
-              <li>Step-Ups with Dumbbells: 3 sets of 10-12 reps per leg</li>
-              <li>Resistance Band Glute Kickbacks: 3 sets of 12-15 reps per leg</li>
-              <li>Sprint Starts: 6-8 x 20 meters</li>
-          </ul>
-          <h3>Flexibility (Post-Workout)</h3>
-          <ul>
-              <li>Hamstring Stretch: 2 sets of 30 seconds per leg</li>
-              <li>Deep Squat Hold: 2 sets of 30 seconds</li>
-              <li>Pigeon Pose: 2 sets of 30 seconds per side</li>
-          </ul>
+        <h2>Day 6: Lower Body Power & Hypertrophy + Mobility</h2>
+        <h3>Strength Training</h3>
+        <ul>
+          <li>Kettlebell Goblet Squats: 4 sets of 8-10 reps</li>
+          <li>Step-Ups with Dumbbells: 3 sets of 10-12 reps per leg</li>
+          <li>Resistance Band Glute Kickbacks: 3 sets of 12-15 reps per leg</li>
+          <li>Sprint Starts: 6-8 x 20 meters</li>
+        </ul>
+        <h3>Flexibility (Post-Workout)</h3>
+        <ul>
+          <li>Hamstring Stretch: 2 sets of 30 seconds per leg</li>
+          <li>Deep Squat Hold: 2 sets of 30 seconds</li>
+          <li>Pigeon Pose: 2 sets of 30 seconds per side</li>
+        </ul>
       </div>
-  
+
       <div class="day">
-          <h2>Day 7: Rest or Active Recovery + Flexibility Session</h2>
-          <h3>Active Recovery</h3>
-          <ul>
-              <li>Foam rolling or light cycling (20-30 minutes)</li>
-          </ul>
-          <h3>Flexibility Session</h3>
-          <ul>
-              <li>Straddle Stretch: 2 sets of 30 seconds per side</li>
-              <li>Bridge Pose or Backbend Progressions: 2-3 sets of 10-15 seconds</li>
-              <li>Spiderman Stretch with Rotation: 2 sets of 5 rotations per side</li>
-              <li>Wrist Mobility Drills: 5 minutes</li>
-          </ul>
+        <h2>Day 7: Rest or Active Recovery + Flexibility Session</h2>
+        <h3>Active Recovery</h3>
+        <ul>
+          <li>Foam rolling or light cycling (20-30 minutes)</li>
+        </ul>
+        <h3>Flexibility Session</h3>
+        <ul>
+          <li>Straddle Stretch: 2 sets of 30 seconds per side</li>
+          <li>Bridge Pose or Backbend Progressions: 2-3 sets of 10-15 seconds</li>
+          <li>Spiderman Stretch with Rotation: 2 sets of 5 rotations per side</li>
+          <li>Wrist Mobility Drills: 5 minutes</li>
+        </ul>
       </div>
-  
+    </main>
+
   </body>
+
 </html>
